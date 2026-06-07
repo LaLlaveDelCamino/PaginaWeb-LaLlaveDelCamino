@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | La Llave del Camino</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+
+<body>
+
+<header>
+    <a href="home.html" class="logo">La Llave del Camino</a>
+
+    <div class="hamburguer-menu" id="menuBtn">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="presentacion.html" class="items">Quiénes somos</a></li>
+            <li class="nav-item"><a href="talleres.html" class="items">Talleres</a></li>
+            <li class="nav-item"><a href="proyectos.html" class="items">Proyectos</a></li>
+            <li class="nav-item"><a href="testimonios.html" class="items">Testimonios</a></li>
+            <li class="nav-item"><a href="contacto.html" class="items">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contacto</h1>
+            <p>
+                Estamos para escucharte. Si deseas comunicarte con nosotros,
+                realizar una consulta o colaborar con nuestra organización,
+                completa el formulario.
+            </p>
+        </div>
+    </section>
+
+    <section class="contacto">
+
+        <h2 class="section-title">Ponte en contacto</h2>
+
+        <div class="contacto-container">
+
+            <div class="contacto-info">
+
+                <h3>Información de contacto</h3>
+
+                <div class="info-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <p>Rosario, Santa Fe</p>
+                </div>
+
+                <div class="info-item">
+                    <i class="bi bi-envelope-fill"></i>
+                    <p>contacto@lallavedelcamino.org</p>
+                </div>
+
+                <div class="info-item">
+                    <i class="bi bi-telephone-fill"></i>
+                    <p>341 XXXX XXX</p>
+                </div>
+
+                <div class="info-item">
+                    <i class="bi bi-instagram"></i>
+                    <p>@la_llave_de_camino</p>
+                </div>
+
+            </div>
+
+            <div class="contacto-form">
+
+                <h3>Envíanos un mensaje</h3>
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Nombre completo"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Correo electrónico"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        placeholder="Teléfono"
+                    >
+
+                    <textarea
+                        id="mensaje"
+                        rows="6"
+                        placeholder="Escribe tu mensaje"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn-orange">
+                        Enviar mensaje
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-sections">
+
+        <div class="footer-col">
+            <h3>Datos de contacto</h3>
+            <p>Rosario, Santa Fe</p>
+            <p>Teléfono: 341 XXXX XXX</p>
+        </div>
+
+        <div class="footer-col">
+            <ul>
+                <li><a href="presentacion.html">Quiénes somos</a></li>
+                <li><a href="talleres.html">Talleres</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Síguenos</h3>
+
+            <div class="social-icons">
+                <a
+                    href="https://www.instagram.com/la_llave_de_camino/"
+                    class="icon-circle"
+                    title="Instagram"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <div class="bottom-links">
+                <a href="home.html">Inicio</a>
+                <a href="talleres.html">Servicios</a>
+                <a href="#">Aviso Legal</a>
+            </div>
+
+            <p class="copyright">
+                &copy; 2026 - La Llave del Camino
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const telefono = document.getElementById("telefono").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const texto =
+`Hola, me comunico desde la página web de La Llave del Camino.
+
+Nombre: ${nombre}
+Email: ${email}
+Teléfono: ${telefono}
+
+Mensaje:
+${mensaje}`;
+
+    const whatsappURL =
+        "https://wa.me/5493425238984?text=" +
+        encodeURIComponent(texto);
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>
