@@ -19,9 +19,10 @@
 </head>
 
 <body>
-
     <header>
-        <a href="#inicio" class="logo">La Llave del Camino</a>
+        <a href="#inicio" class="logo">
+            <img src="../src/img/LogoLlaveDelCamino.jpeg" alt="Logo La Llave del Camino">
+        </a>
 
         <div class="hamburguer-menu" id="menuBtn">
             <div class="line line-1"></div>
@@ -31,11 +32,11 @@
 
         <nav class="navbar" id="navbar">
             <ul class="nav-list">
-                <li class="nav-item"><a href="#QuienesSomos" class="items">Quienes Somos</a></li>
-                <li class="nav-item"><a href="#talleres" class="items">Talleres</a></li>
-                <li class="nav-item"><a href="#proyectos" class="items">Proyectos</a></li>
-                <li class="nav-item"><a href="#testimonios" class="items">Testimonios</a></li>
-                <li class="nav-item"><a href="#contacto" class="items">Contacto</a></li>
+                <li class="nav-item" style="--i: 1"><a href="#QuienesSomos" class="items">Quienes Somos</a></li>
+                <li class="nav-item" style="--i: 2"><a href="#talleres" class="items">Talleres</a></li>
+                <li class="nav-item" style="--i: 3"><a href="#proyectos" class="items">Proyectos</a></li>
+                <li class="nav-item" style="--i: 4"><a href="#testimonios" class="items">Testimonios</a></li>
+                <li class="nav-item" style="--i: 5"><a href="#contacto" class="items">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -82,6 +83,24 @@
             </div>
         </section>
 
+        <!-- ---- IMPACTO ---- -->
+        <section class="impacto">
+            <div class="impacto-container">
+                <div class="impacto-item">
+                    <span class="number">14</span>
+                    <p>Años de trayectoria</p>
+                </div>
+                <div class="impacto-item">
+                    <span class="number">+150</span>
+                    <p>Mujeres acompañadas</p>
+                </div>
+                <div class="impacto-item">
+                    <span class="number">3</span>
+                    <p>Talleres activos</p>
+                </div>
+            </div>
+        </section>
+
         <!-- ---- TALLERES ---- -->
         <section class="seccion-talleres" id="talleres">
             <div class="section-header">
@@ -93,17 +112,17 @@
                 <div class="pilar-card">
                     <h3>Talleres de Arteterapia</h3>
                     <p>Una descripción de los talleres de arteterapia se podrian poner imagenes.<br>&nbsp;</p>
-                    <a href="#contacto" class="btn-orange">Contactanos para inscribirte</a>
+                    <a href="#contacto" class="btn-orange">Quiero participar</a>
                 </div>
                 <div class="pilar-card">
                     <h3>Talleres de Tejido</h3>
                     <p>Una descripción de los talleres de tejido se podria poner imagenes.<br>&nbsp;</p>
-                    <a href="#contacto" class="btn-orange">Contactanos para inscribirte</a>
+                    <a href="#contacto" class="btn-orange">Consultar vacantes</a>
                 </div>
                 <div class="pilar-card">
                     <h3>Electricidad domiciliaria</h3>
                     <p>Una descripción del taller de electricidad domiciliaria se podria tambien agregar imagenes.</p>
-                    <a href="#contacto" class="btn-orange">Contactanos para inscribirte</a>
+                    <a href="#contacto" class="btn-orange">Inscribirme acá</a>
                 </div>
             </div>
         </section>
@@ -196,24 +215,6 @@
                 </div>
             </div>
         </section>
-        <!-- ---- IMPACTO ---- -->
-        <section class="impacto">
-            <div class="impacto-container">
-                <div class="impacto-item">
-                    <span class="number">14</span>
-                    <p>Años de trayectoria</p>
-                </div>
-                <div class="impacto-item">
-                    <span class="number">+150</span>
-                    <p>Mujeres acompañadas</p>
-                </div>
-                <div class="impacto-item">
-                    <span class="number">3</span>
-                    <p>Talleres activos</p>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <footer>
@@ -257,7 +258,7 @@
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
