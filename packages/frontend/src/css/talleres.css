@@ -12,3 +12,35 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.talleres-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.taller-card {
+    border-bottom: 0.4rem solid var(--brand-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.taller-card h3 {
+    min-height: 5rem;
+}
+
+.taller-card p {
+    flex-grow: 1;
+}
+
+.taller-card .btn-orange{
+    margin-top: auto;
+}
+
+@media (min-width: 76.8rem) {
+    .talleres-grid {
+        grid-template-columns:repeat(3, 1fr);
+    }
+}   
