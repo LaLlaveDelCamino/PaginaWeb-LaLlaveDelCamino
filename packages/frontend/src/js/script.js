@@ -54,3 +54,36 @@ ${mensaje}`;
     const whatsappURL = "https://wa.me/5493425238984?text=" + encodeURIComponent(texto);
     window.open(whatsappURL, "_blank");
 });
+
+const toggleBtn = document.getElementById('contrast-toggle');
+const body = document.body;
+
+// Modo Alto contraste
+const systemPrefersContrast = window.matchMedia('(prefers-contrast: more)');
+
+function updateContrast(isHigh) {
+    if (isHigh) {
+        body.classList.add('high-contrast');
+    } else {
+        body.classList.remove('high-contrast');
+    }
+}
+
+systemPrefersContrast.addEventListener('change', (e) => {
+    if (!localStorage.getItem('user-preference')) {
+        updateContrast(e.matches);
+    }
+});
+
+toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('high-contrast');
+    const isHigh = body.classList.contains('high-contrast');
+    localStorage.setItem('user-preference', isHigh ? 'high' : 'none');
+});
+
+const savedPreference = localStorage.getItem('user-preference');
+if (savedPreference === 'high') {
+    body.classList.add('high-contrast');
+} else if (!savedPreference && systemPrefersContrast.matches) {
+    body.classList.add('high-contrast');
+}
