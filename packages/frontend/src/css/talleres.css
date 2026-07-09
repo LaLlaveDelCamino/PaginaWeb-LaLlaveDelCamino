@@ -16,7 +16,7 @@
 .talleres-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
 .taller-card {
@@ -25,22 +25,102 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 3rem 2rem;
+    background-color: #fcfcfc;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.taller-dia {
+    display: inline-block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--brand-green);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    background-color: rgba(42, 50, 41, 0.06);
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
 }
 
 .taller-card h3 {
-    min-height: 5rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2a3229;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .taller-card p {
     flex-grow: 1;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: #555;
 }
 
 .taller-card .btn-orange{
     margin-top: auto;
+    width: 100%;
+    max-width: 22rem; 
+    padding: 1rem 2rem;
+}
+
+.btn-orange-disabled {
+    background-color: #ccc;
+    color: #fff;
+    cursor: not-allowed;
+    pointer-events: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.cronograma-descarga {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 3rem 2rem;
+    background-color: rgba(42, 50, 41, 0.03);
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cronograma-descarga p {
+    font-size: 1.6rem;
+    color: #555;
+    margin: 0;
+    font-weight: 500;
+}
+
+.cronograma-descarga .btn-secondary {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--brand-green);
+    text-decoration: none;
+    border: 0.2rem solid var(--brand-green);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.cronograma-descarga .btn-secondary:hover {
+    background-color: var(--brand-green);
+    color: var(--white);
+    transform: translateY(-2px);
 }
 
 @media (min-width: 76.8rem) {
     .talleres-grid {
         grid-template-columns:repeat(3, 1fr);
+        gap: 2.5rem;
     }
 }   
