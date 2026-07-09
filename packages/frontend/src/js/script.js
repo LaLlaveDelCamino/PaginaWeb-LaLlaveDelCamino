@@ -54,3 +54,21 @@ ${mensaje}`;
     const whatsappURL = "https://wa.me/5493425238984?text=" + encodeURIComponent(texto);
     window.open(whatsappURL, "_blank");
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const anioInicio = 2012; 
+    const anioActual = new Date().getFullYear();
+    const trayectoriaCalculada = anioActual - anioInicio;
+
+    // Hero
+    const heroContador = document.getElementById("hero-trayectoria");
+    if (heroContador) {
+        heroContador.textContent = trayectoriaCalculada;
+    }
+
+    // Impacto
+    const aniosContador = document.getElementById("anios-trayectoria");
+    if (aniosContador) {
+        aniosContador.textContent = trayectoriaCalculada;
+    }
+});
