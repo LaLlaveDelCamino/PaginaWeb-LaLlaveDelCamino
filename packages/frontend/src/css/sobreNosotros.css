@@ -1,0 +1,70 @@
+#SobreNosotros {
+    scroll-margin-top: 10rem; 
+}
+
+.seccion-sobreNosotros {
+    padding: 8rem 2rem;
+    background-color: var(--white);
+}
+
+.seccion-sobreNosotros .about-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Estilo del logo */
+.about-logo img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 3rem rgba(42, 59, 41, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilo de los bloques de texto */
+.about-block {
+    margin-bottom: 3rem;
+}
+
+.about-block h2 {
+    font-family: var(--font-heading);
+    color: var(--brand-green);
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+}
+
+.about-block p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Estilo de la lista de actividades */
+.activities {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.activities li {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.activities li i {
+    margin-right: 1.2rem;
+    color: var(--brand-orange);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .seccion-sobreNosotros .about-content-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
