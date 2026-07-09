@@ -497,9 +497,23 @@ footer a:hover {
     color: #D9A066; /* Tu naranja */
 }
 
-/* Opcional: Para que la luna se vea mejor en modo oscuro */
+@media (max-width: 768px) {
+    .contrast-btn {
+        display: block;
+        margin: 0.2rem auto;       
+        border: 0.2rem solid white;
+        border-radius: 50%;
+        padding: 1rem;
+    }
+
+    .contrast-btn svg {
+        width: 4rem;
+        height: 4rem;
+        stroke: #ffffff; 
+}}
+
 body.high-contrast .contrast-btn {
-    color: #FFFFFF; /* Blanco en modo oscuro */
+    color: #FFFFFF; 
 }
 
 body.high-contrast {
