@@ -16,12 +16,15 @@
     <link rel="stylesheet" href="css/talleres.css">
     <link rel="stylesheet" href="css/proyectos.css">
     <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/sobreNosotros.css">
+    <link rel="icon" type="image/jpeg" href="img/LogoLlaveDelCamino.jpeg">
 </head>
 
 <body>
-
     <header>
-        <a href="#inicio" class="logo">La Llave del Camino</a>
+        <a href="#inicio" class="logo">
+            <img src="img/LogoLlaveDelCamino.jpeg" alt="Logo La Llave del Camino">
+        </a>
 
         <div class="hamburguer-menu" id="menuBtn">
             <div class="line line-1"></div>
@@ -31,11 +34,19 @@
 
         <nav class="navbar" id="navbar">
             <ul class="nav-list">
-                <li class="nav-item"><a href="#QuienesSomos" class="items">Quienes Somos</a></li>
-                <li class="nav-item"><a href="#talleres" class="items">Talleres</a></li>
-                <li class="nav-item"><a href="#proyectos" class="items">Proyectos</a></li>
-                <li class="nav-item"><a href="#testimonios" class="items">Testimonios</a></li>
-                <li class="nav-item"><a href="#contacto" class="items">Contacto</a></li>
+                <li class="nav-item" style="--i: 1"><a href="#talleres" class="items">Talleres</a></li>
+                <li class="nav-item" style="--i: 2"><a href="#proyectos" class="items">Proyectos</a></li>
+                <li class="nav-item" style="--i: 3"><a href="#testimonios" class="items">Testimonios</a></li>
+                <li class="nav-item" style="--i: 4"><a href="#SobreNosotros" class="items">Sobre Nosotros</a></li>
+                <li class="nav-item" style="--i: 5"><a href="#contacto" class="items">Contacto</a></li>
+                <li>
+                    <button id="contrast-toggle" class="contrast-btn" aria-label="Cambiar modo de contraste"
+                        title="Activar modo de alta legibilidad">
+                        <svg id="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -70,7 +81,8 @@
                 <div class="pilar-card">
                     <div class="pilar-icon"><i class="bi bi-tools"></i></div>
                     <h3>Talleres y Capacitación</h3>
-                    <p>Espacios de arteterapia, tejido, panificado para aprender, música, taller de arte y cocina kids, marroquineria.
+                    <p>Espacios de arteterapia, tejido, panificado para aprender, música, taller de arte y cocina kids,
+                        marroquineria.
                     </p>
                 </div>
                 <div class="pilar-card">
@@ -78,6 +90,24 @@
                     <h3>Prevención Comunitaria</h3>
                     <p>Abordaje activo en colegios de Rosario y en ámbitos deportivos para la prevención de adicciones.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---- IMPACTO ---- -->
+        <section class="impacto">
+            <div class="impacto-container">
+                <div class="impacto-item">
+                    <span class="number">14</span>
+                    <p>Años de trayectoria</p>
+                </div>
+                <div class="impacto-item">
+                    <span class="number">+150</span>
+                    <p>Mujeres acompañadas</p>
+                </div>
+                <div class="impacto-item">
+                    <span class="number">3</span>
+                    <p>Talleres activos</p>
                 </div>
             </div>
         </section>
@@ -161,8 +191,14 @@
                 <div class="pilar-card taller-card">
                     <span class="taller-dia">Encuentros Programados</span>
                     <h3>Grupo de Apoyo para Familias de Adictos</h3>
+<<<<<<< HEAD
                     <p>Espacio terapéutico de contención y apoyo mutuo para orientar y acompañar a los entornos familiares en el abordaje de adicciones.</p>
                     <a href="#contacto" class="btn-orange">Pedir información</a>
+=======
+                    <p>Una descripción del taller del grupo de apoyo ára familias de adictos, tambien agregar imagenes.
+                    </p>
+                    <a href="#contacto" class="btn-orange">Contactanos para inscribirte</a>
+>>>>>>> origin/main
                 </div>
             </div>
 
@@ -175,7 +211,6 @@
         <!-- ---- PROYECTOS ---- -->
         <section class="seccion-proyectos" id="proyectos">
             <div class="section-header">
-                <span class="section-tag">En acción</span>
                 <h2 class="section-title">Nuestros Proyectos</h2>
                 <div class="section-divider"></div>
             </div>
@@ -187,9 +222,9 @@
                         <p>Espacios terapéuticos grupales e individuales enfocados en la escucha activa, la prevención
                             de adicciones y el acompañamiento integral de familias en Rosario.</p>
                         <div class="contenedor-fotos-proyecto">
-                            <img src="https://picsum.photos/id/12/800/600" alt="pic1">
-                            <img src="https://picsum.photos/id/15/800/600" alt="pic2">
-                            <img src="https://picsum.photos/id/19/800/600" alt="pic3">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Paisaje 1">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05" alt="Paisaje 2">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Paisaje 3">
                         </div>
                     </div>
                 </div>
@@ -200,9 +235,9 @@
                         <p>Formación en oficios y herramientas prácticas que promueven la autonomía económica, el
                             desarrollo de emprendimientos y la inserción laboral de las mujeres.</p>
                         <div class="contenedor-fotos-proyecto">
-                            <img src="https://picsum.photos/id/12/800/600" alt="pic1">
-                            <img src="https://picsum.photos/id/15/800/600" alt="pic2">
-                            <img src="https://picsum.photos/id/19/800/600" alt="pic3">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Paisaje 1">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05" alt="Paisaje 2">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Paisaje 3">
                         </div>
                     </div>
                 </div>
@@ -213,14 +248,46 @@
                         <p>Acompañamiento educativo pedagógico, actividades recreativas y meriendas orientadas a
                             proteger los derechos y potenciar el crecimiento de los niños del barrio.</p>
                         <div class="contenedor-fotos-proyecto">
-                            <img src="https://picsum.photos/id/12/800/600" alt="pic1">
-                            <img src="https://picsum.photos/id/15/800/600" alt="pic2">
-                            <img src="https://picsum.photos/id/19/800/600" alt="pic3">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Paisaje 1">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05" alt="Paisaje 2">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Paisaje 3">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- SOBRE NOSOTROS -->
+<section id="SobreNosotros" class="seccion-sobreNosotros">
+    <div class="section-header">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <div class="section-divider"></div>
+    </div>
+    
+    <div class="about-content-wrapper">
+        <div class="about-logo">
+            <img src="img/LogoLlaveDelCamino.jpeg" alt="Logo La Llave del Camino">
+        </div>
+        <div class="about-info">
+            <div class="about-block">
+                <h2>¿Quiénes somos?</h2>
+                <p>Somos una ONG sin fines de lucro que acompaña a personas y familias en situación de consumos problemáticos, violencias y vulnerabilidad.</p>
+                <p>Nuestro objetivo es realizar acciones preventivas y de ayuda psicosocial para mejorar la calidad de vida en áreas de salud, educación, familia, cultura, laboral y social.</p>
+            </div>
+            <div class="about-block">
+                <h2>¿Qué hacemos?</h2>
+                <ul class="activities">
+                    <li><i class="bi bi-paperclip"></i> Atención y asesoramiento</li>
+                    <li><i class="bi bi-paperclip"></i> Defensa de derechos</li>
+                    <li><i class="bi bi-paperclip"></i> Prevención de consumos problemáticos</li>
+                    <li><i class="bi bi-paperclip"></i> Capacitaciones</li>
+                    <li><i class="bi bi-paperclip"></i> Actividades recreativas, culturales y artísticas</li>
+                    <li><i class="bi bi-paperclip"></i> Grupos terapéuticos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- ---- CONTACTO ---- -->
         <section class="contacto" id="contacto">
@@ -241,7 +308,7 @@
                     </div>
                     <div class="info-item">
                         <i class="bi bi-telephone-fill"></i>
-                        <p></p>
+                        <p>+54 9 341 271 0103</p>
                     </div>
                     <div class="info-item">
                         <i class="bi bi-instagram"></i>
@@ -260,23 +327,6 @@
                 </div>
             </div>
         </section>
-        <!-- ---- IMPACTO ---- -->
-        <section class="impacto">
-            <div class="impacto-container">
-                <div class="impacto-item">
-                    <span class="number">14</span>
-                    <p>Años de trayectoria</p>
-                </div>
-                <div class="impacto-item">
-                    <span class="number">+150</span>
-                    <p>Mujeres acompañadas</p>
-                </div>
-                <div class="impacto-item">
-                    <span class="number">3</span>
-                    <p>Talleres activos</p>
-                </div>
-            </div>
-        </section>
 
     </main>
 
@@ -285,11 +335,17 @@
             <div class="footer-col">
                 <h3>Datos de contacto</h3>
                 <p>Dirección de la ONG, Rosario</p>
-                <p>Teléfono: </p>
+                <p>Teléfono:
+                    <a href="https://wa.me/5493412710103" target="_blank"
+                        style="color: inherit; text-decoration: none;">
+                        +54 9 341 271 0103
+                    </a>
+                </p>
             </div>
             <div class="footer-col">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#QuienesSomos">Quienes Somos</a></li>
                     <li><a href="#talleres">Talleres</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
                     <li><a href="#contacto">Contacto</a></li>
@@ -315,13 +371,18 @@
                 <a href="#inicio">Inicio</a>
                 <a href="#talleres">Talleres</a>
                 <a href="#proyectos">Proyectos</a>
+                <a href="#SobreNosotros">Sobre Nosotros</a>
                 <a href="#contacto">Contacto</a>
             </div>
             <p class="copyright">&copy; 2026 - La Llave del Camino</p>
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <a href="https://wa.me/5493412710103" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
 
 </body>
 

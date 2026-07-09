@@ -1,6 +1,6 @@
 .contacto {
     padding: 5rem 2rem;
-    background-color: var(--bg-color);
+    background-color:  var(--bg-color);
 }
 
 .contacto .section-header {
@@ -21,6 +21,7 @@
     padding: 2.5rem;
     border-radius: 1.5rem;
     box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.05);
+    border-bottom: 0.4rem solid var(--brand-green);
 }
 
 .contacto-info h3,
