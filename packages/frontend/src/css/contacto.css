@@ -1,6 +1,6 @@
 .contacto {
     padding: 5rem 2rem;
-    background-color: var(--white);
+    background-color:  var(--bg-color);
 }
 
 .contacto .section-header {

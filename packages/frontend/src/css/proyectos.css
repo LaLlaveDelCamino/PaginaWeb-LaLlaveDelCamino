@@ -41,13 +41,14 @@
 .proyecto-card-body p {
     font-size: 1.5rem;
     line-height: 1.6;
-    margin-bottom: 2.4rem;
+    margin-bottom: 4rem;
     opacity: 0.85;
 }
 
 .contenedor-fotos-proyecto {
     display: flex;
     gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .contenedor-fotos-proyecto img {

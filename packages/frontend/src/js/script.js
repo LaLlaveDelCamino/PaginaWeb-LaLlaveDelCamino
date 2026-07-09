@@ -72,3 +72,43 @@ document.addEventListener("DOMContentLoaded", function() {
         aniosContador.textContent = trayectoriaCalculada;
     }
 });
+
+// Modo Alto contraste
+
+const toggleBtn = document.getElementById('contrast-toggle');
+const icon = document.getElementById('theme-icon');
+const body = document.body;
+const systemPrefersContrast = window.matchMedia('(prefers-contrast: more)');
+const iconSol = '<circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>';
+const iconAccesible = '<circle cx="12" cy="12" r="10"></circle><path d="M12 2v20"></path>';
+
+function syncIcon(isHigh) {
+    icon.innerHTML = isHigh ? iconAccesible : iconSol;
+}
+
+function updateContrast(isHigh) {
+    if (isHigh) {
+        body.classList.add('high-contrast');
+    } else {
+        body.classList.remove('high-contrast');
+    }
+    syncIcon(isHigh);
+}
+
+toggleBtn.addEventListener('click', () => {
+    const isHigh = body.classList.toggle('high-contrast');
+    localStorage.setItem('user-preference', isHigh ? 'high' : 'none');
+    syncIcon(isHigh);
+});
+
+systemPrefersContrast.addEventListener('change', (e) => {
+    if (!localStorage.getItem('user-preference')) {
+        updateContrast(e.matches);
+    }
+});
+
+const savedPreference = localStorage.getItem('user-preference');
+
+const shouldBeHigh = (savedPreference === 'high') || (!savedPreference && systemPrefersContrast.matches);
+
+updateContrast(shouldBeHigh);

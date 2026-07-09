@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/talleres.css">
     <link rel="stylesheet" href="css/proyectos.css">
     <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/sobreNosotros.css">
     <link rel="icon" type="image/jpeg" href="img/LogoLlaveDelCamino.jpeg">
 </head>
 
@@ -33,11 +34,19 @@
 
         <nav class="navbar" id="navbar">
             <ul class="nav-list">
-                <li class="nav-item" style="--i: 1"><a href="#QuienesSomos" class="items">Quienes Somos</a></li>
-                <li class="nav-item" style="--i: 2"><a href="#talleres" class="items">Talleres</a></li>
-                <li class="nav-item" style="--i: 3"><a href="#proyectos" class="items">Proyectos</a></li>
-                <li class="nav-item" style="--i: 4"><a href="#testimonios" class="items">Testimonios</a></li>
+                <li class="nav-item" style="--i: 1"><a href="#talleres" class="items">Talleres</a></li>
+                <li class="nav-item" style="--i: 2"><a href="#proyectos" class="items">Proyectos</a></li>
+                <li class="nav-item" style="--i: 3"><a href="#testimonios" class="items">Testimonios</a></li>
+                <li class="nav-item" style="--i: 4"><a href="#SobreNosotros" class="items">Sobre Nosotros</a></li>
                 <li class="nav-item" style="--i: 5"><a href="#contacto" class="items">Contacto</a></li>
+                <li>
+                    <button id="contrast-toggle" class="contrast-btn" aria-label="Cambiar modo de contraste"
+                        title="Activar modo de alta legibilidad">
+                        <svg id="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -235,6 +244,38 @@
             </div>
         </section>
 
+        <!-- SOBRE NOSOTROS -->
+<section id="SobreNosotros" class="seccion-sobreNosotros">
+    <div class="section-header">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <div class="section-divider"></div>
+    </div>
+    
+    <div class="about-content-wrapper">
+        <div class="about-logo">
+            <img src="img/LogoLlaveDelCamino.jpeg" alt="Logo La Llave del Camino">
+        </div>
+        <div class="about-info">
+            <div class="about-block">
+                <h2>¿Quiénes somos?</h2>
+                <p>Somos una ONG sin fines de lucro que acompaña a personas y familias en situación de consumos problemáticos, violencias y vulnerabilidad.</p>
+                <p>Nuestro objetivo es realizar acciones preventivas y de ayuda psicosocial para mejorar la calidad de vida en áreas de salud, educación, familia, cultura, laboral y social.</p>
+            </div>
+            <div class="about-block">
+                <h2>¿Qué hacemos?</h2>
+                <ul class="activities">
+                    <li><i class="bi bi-paperclip"></i> Atención y asesoramiento</li>
+                    <li><i class="bi bi-paperclip"></i> Defensa de derechos</li>
+                    <li><i class="bi bi-paperclip"></i> Prevención de consumos problemáticos</li>
+                    <li><i class="bi bi-paperclip"></i> Capacitaciones</li>
+                    <li><i class="bi bi-paperclip"></i> Actividades recreativas, culturales y artísticas</li>
+                    <li><i class="bi bi-paperclip"></i> Grupos terapéuticos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!-- ---- CONTACTO ---- -->
         <section class="contacto" id="contacto">
             <div class="section-header">
@@ -315,9 +356,9 @@
         <div class="footer-bottom">
             <div class="bottom-links">
                 <a href="#inicio">Inicio</a>
-                <a href="#QuienesSomos">Quienes Somos</a>
                 <a href="#talleres">Talleres</a>
                 <a href="#proyectos">Proyectos</a>
+                <a href="#SobreNosotros">Sobre Nosotros</a>
                 <a href="#contacto">Contacto</a>
             </div>
             <p class="copyright">&copy; 2026 - La Llave del Camino</p>
