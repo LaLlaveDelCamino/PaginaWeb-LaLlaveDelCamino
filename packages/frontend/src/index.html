@@ -25,10 +25,6 @@
             <img src="img/LogoLlaveDelCamino.jpeg" alt="Logo La Llave del Camino">
         </a>
 
-        <button id="contrast-toggle" aria-label="Cambiar a alto contraste" style="margin-right: 20px; padding: 5px; cursor: pointer;">
-        <i class="bi bi-circle-half"></i>
-        </button>
-
         <div class="hamburguer-menu" id="menuBtn">
             <div class="line line-1"></div>
             <div class="line line-2"></div>
@@ -42,6 +38,14 @@
                 <li class="nav-item" style="--i: 3"><a href="#proyectos" class="items">Proyectos</a></li>
                 <li class="nav-item" style="--i: 4"><a href="#testimonios" class="items">Testimonios</a></li>
                 <li class="nav-item" style="--i: 5"><a href="#contacto" class="items">Contacto</a></li>
+                <li>
+                    <button id="contrast-toggle" class="contrast-btn" aria-label="Cambiar modo de contraste"
+                        title="Activar modo de alta legibilidad">
+                        <svg id="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -89,7 +93,7 @@
             </div>
         </section>
 
-       <!-- ---- IMPACTO ---- -->
+        <!-- ---- IMPACTO ---- -->
         <section class="impacto">
             <div class="impacto-container">
                 <div class="impacto-item">

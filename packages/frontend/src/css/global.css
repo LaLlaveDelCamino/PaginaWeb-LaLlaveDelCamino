@@ -482,6 +482,26 @@ footer a:hover {
 }
 
 /* --- MODO ALTO CONTRASTE --- */
+
+.contrast-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4A5D4E; /* Tu verde oliva */
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.contrast-btn:hover {
+    color: #D9A066; /* Tu naranja */
+}
+
+/* Opcional: Para que la luna se vea mejor en modo oscuro */
+body.high-contrast .contrast-btn {
+    color: #FFFFFF; /* Blanco en modo oscuro */
+}
+
 body.high-contrast {
     --bg-color: #121212;
     --text-main: #FFFFFF;
