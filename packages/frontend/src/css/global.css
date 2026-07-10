@@ -276,6 +276,7 @@ header {
 }
 
 /* ---- FOOTER ---- */
+/* ---- FOOTER ---- */
 footer {
     background-color: var(--text-main);
     color: var(--bg-color);
@@ -351,28 +352,23 @@ footer a:hover {
 
 .footer-bottom {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
     text-align: center;
     font-size: 1.4rem;
 }
 
-.bottom-links {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.bottom-links a {
-    color: var(--bg-color);
-    transition: color 0.3s ease;
-    text-decoration: none;
-    padding: 0.5rem;
-}
-
 .copyright {
     opacity: 0.7;
+}
+
+/* ---- SCROLL ---- */
+#inicio,
+#QuienesSomos,
+#talleres,
+#proyectos,
+#testimonios,
+#contacto {
+    scroll-margin-top: 12rem;
 }
 
 /* ---- SCROLL ---- */
@@ -466,18 +462,13 @@ footer a:hover {
         font-size: 3.2rem;
     }
 
-    .footer-sections {
+        .footer-sections {
         flex-direction: row;
         justify-content: space-between;
     }
 
     .footer-col {
         flex: 1;
-    }
-
-    .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
     }
 }
 
