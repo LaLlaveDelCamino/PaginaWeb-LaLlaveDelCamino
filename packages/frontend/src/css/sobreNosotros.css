@@ -4,7 +4,7 @@
 
 .seccion-sobreNosotros {
     padding: 8rem 2rem;
-    background-color: var(--white);
+    background-color: var(--bg-color);
 }
 
 .seccion-sobreNosotros .about-content-wrapper {
