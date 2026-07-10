@@ -84,6 +84,26 @@
     color: var(--brand-orange);
 }
 
+/* --- ALTO CONTRASTE --- */
+body.high-contrast .proyecto-item--activo .proyecto-icono {
+    background-color: var(--brand-orange);
+    border: 0.2rem solid var(--brand-orange);
+}
+
+body.high-contrast .proyecto-item--activo .proyecto-icono i {
+    color: #000;
+}
+
+body.high-contrast .badge-activo {
+    background-color: var(--brand-orange);
+    color: #000;
+    border: none;
+}
+
+body.high-contrast .proyectos-timeline::before {
+    background-color: var(--brand-green);
+}
+
 @media (max-width: 76.8rem) {
     .proyectos-timeline {
         display: block;
