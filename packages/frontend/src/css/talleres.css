@@ -93,25 +93,6 @@
     padding: 1rem;
 }
 
-.cronograma-descarga .btn-secondary {
-    display: inline-block;
-    padding: 1.2rem 2.4rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--brand-green);
-    text-decoration: none;
-    border: 0.2rem solid var(--brand-green);
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    background-color: transparent;
-}
-
-.cronograma-descarga .btn-secondary:hover {
-    background-color: var(--brand-green);
-    color: var(--white);
-    transform: translateY(-2px);
-}
-
 .talleres-acordeon { 
     display: none; 
     margin-top: 2rem; 
@@ -157,8 +138,6 @@
     .talleres-acordeon { display: block; }
 }
 
-.cronograma-descarga { text-align: center; margin-top: 3rem; }
-.cronograma-descarga p { margin-bottom: 1rem; color: var(--brand-green); font-weight: 600; }
 
 /* ===== MODAL ===== */
 .taller-modal-overlay {
