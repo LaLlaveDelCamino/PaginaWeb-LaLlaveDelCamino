@@ -12,7 +12,6 @@
     margin: 0 auto;
 }
 
-/* Bloque superior: logo + quiénes somos */
 .about-top {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -21,7 +20,6 @@
     margin-bottom: 5rem;
 }
 
-/* Estilo del logo */
 .about-logo img {
     width: 100%;
     max-width: 350px;
@@ -43,7 +41,6 @@
     line-height: 1.7;
 }
 
-/* Bloque inferior: qué hacemos, a todo el ancho */
 .about-bottom h2 {
     font-family: var(--font-heading);
     color: var(--brand-green);
@@ -52,7 +49,6 @@
     text-align: center;
 }
 
-/* Lista de actividades en grilla de tarjetas */
 .lista-que-hacemos {
     list-style: none;
     padding: 0;
@@ -88,7 +84,7 @@
     margin-top: 0.1rem;
 }
 
-/* Responsivo para móviles */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .about-top {
         grid-template-columns: 1fr;
