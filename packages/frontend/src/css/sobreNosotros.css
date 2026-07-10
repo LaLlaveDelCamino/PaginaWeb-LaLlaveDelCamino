@@ -63,7 +63,7 @@
     align-items: flex-start;
     gap: 1.2rem;
     font-size: 1.5rem;
-    color: var(--text-color, #333);
+    color: inherit; 
     background-color: rgba(74, 93, 78, 0.04);
     border: 1px solid rgba(74, 93, 78, 0.1);
     border-radius: 1rem;
@@ -84,6 +84,19 @@
     margin-top: 0.1rem;
 }
 
+body.high-contrast .lista-que-hacemos li {
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2rem solid var(--brand-green);
+    border-radius: 0;
+    color: var(--text-main);
+}
+
+body.high-contrast .lista-que-hacemos li i {
+    background-color: transparent;
+    color: var(--brand-green);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .about-top {
@@ -95,3 +108,4 @@
         grid-template-columns: 1fr;
     }
 }
+
