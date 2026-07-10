@@ -205,3 +205,6 @@ document.getElementById("tallerModalCerrar").addEventListener("click", () => {
 document.getElementById("tallerModalOverlay").addEventListener("click", e => {
   if (e.target.id === "tallerModalOverlay") e.target.classList.remove("activo");
 });
+document.getElementById("tallerModalCta").addEventListener("click", () => {
+  document.getElementById("tallerModalOverlay").classList.remove("activo");
+});
