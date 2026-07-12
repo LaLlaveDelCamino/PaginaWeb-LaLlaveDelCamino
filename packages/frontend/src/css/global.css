@@ -371,16 +371,6 @@ footer a:hover {
     scroll-margin-top: 12rem;
 }
 
-/* ---- SCROLL ---- */
-#inicio,
-#QuienesSomos,
-#talleres,
-#proyectos,
-#testimonios,
-#contacto {
-    scroll-margin-top: 12rem;
-}
-
 /* ---- WHATSAPP --- */
 
 .whatsapp-float {
@@ -478,20 +468,20 @@ footer a:hover {
     background: none;
     border: none;
     cursor: pointer;
-    color: #4A5D4E; /* Tu verde oliva */
+    color: #4A5D4E;
     display: flex;
     align-items: center;
     transition: color 0.3s ease;
+    margin: 0.2rem auto; 
 }
 
 .contrast-btn:hover {
-    color: #D9A066; /* Tu naranja */
+    color: #D9A066;
 }
 
 @media (max-width: 768px) {
     .contrast-btn {
         display: block;
-        margin: 0.2rem auto;       
         border: 0.2rem solid white;
         border-radius: 50%;
         padding: 1rem;
