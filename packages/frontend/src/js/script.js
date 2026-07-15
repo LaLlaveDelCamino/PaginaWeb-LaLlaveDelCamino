@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Modo Alto contraste
-
 const toggleBtn = document.getElementById('contrast-toggle');
 const icon = document.getElementById('theme-icon');
 const body = document.body;
@@ -207,4 +206,145 @@ document.getElementById("tallerModalOverlay").addEventListener("click", e => {
 });
 document.getElementById("tallerModalCta").addEventListener("click", () => {
   document.getElementById("tallerModalOverlay").classList.remove("activo");
+});
+
+// Carrusel
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carrusel-track");
+  const items = document.querySelectorAll(".carrusel-item");
+  const nextBtn = document.querySelector(".btn-next");
+  const prevBtn = document.querySelector(".btn-prev");
+  const container = document.querySelector(".carrusel-container");
+
+  const modalOverlay = document.getElementById("actividadModalOverlay");
+  const modalImg = document.getElementById("actividadModalImg");
+  const modalTitulo = document.getElementById("actividadModalTitulo");
+  const modalDescripcion = document.getElementById("actividadModalDescripcion");
+  const modalCerrar = document.getElementById("actividadModalCerrar");
+
+  let currentIndex = 0;
+  let autoPlayTimer = null;
+
+  function getItemsPerScreen() {
+    if (items.length === 0) return 1;
+    
+    const trackWidth = track.getBoundingClientRect().width;
+    const itemWidth = items[0].getBoundingClientRect().width;
+    
+    const calculatedItems = Math.round(trackWidth / itemWidth);
+    
+    return Math.max(1, calculatedItems);
+  }
+
+  function updateCarrusel() {
+    if (items.length === 0) return;
+    
+    const itemsPerScreen = getItemsPerScreen();
+    const maxIndex = items.length - itemsPerScreen;
+
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    if (currentIndex < 0) currentIndex = 0;
+
+    const itemWidth = items[0].getBoundingClientRect().width;
+    const gap = 25;
+
+    const moveAmount = currentIndex * (itemWidth + gap);
+    track.style.transform = `translateX(-${moveAmount}px)`;
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoPlayTimer = setInterval(() => {
+      const itemsPerScreen = getItemsPerScreen();
+      const maxIndex = items.length - itemsPerScreen;
+
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+      updateCarrusel();
+    }, 4000);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+    }
+  }
+
+  nextBtn.addEventListener("click", () => {
+    const itemsPerScreen = getItemsPerScreen();
+    const maxIndex = items.length - itemsPerScreen;
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateCarrusel();
+    startAutoPlay();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    const itemsPerScreen = getItemsPerScreen();
+    const maxIndex = items.length - itemsPerScreen;
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = maxIndex;
+    }
+    updateCarrusel();
+    startAutoPlay();
+  });
+
+  items.forEach(item => {
+    item.addEventListener("click", () => {
+      const titulo = item.getAttribute("data-titulo");
+      const descripcion = item.getAttribute("data-descripcion");
+      const imgSrc = item.querySelector("img").getAttribute("src");
+
+      modalImg.src = imgSrc;
+      modalImg.alt = titulo;
+      modalTitulo.textContent = titulo;
+      modalDescripcion.textContent = descripcion;
+
+      modalOverlay.classList.add("activo");
+      stopAutoPlay();
+    });
+  });
+
+  function cerrarModal() {
+    modalOverlay.classList.remove("activo");
+    startAutoPlay();
+  }
+
+  modalCerrar.addEventListener("click", () => {
+    cerrarModal();
+  });
+
+  modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) {
+      cerrarModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalOverlay.classList.contains("activo")) {
+      cerrarModal();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    updateCarrusel();
+  });
+
+  container.addEventListener("mouseenter", stopAutoPlay);
+  container.addEventListener("mouseleave", () => {
+    if (!modalOverlay.classList.contains("activo")) {
+      startAutoPlay();
+    }
+  });
+
+  updateCarrusel();
+  startAutoPlay();
 });
