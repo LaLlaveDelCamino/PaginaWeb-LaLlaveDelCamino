@@ -1,3 +1,7 @@
+#actividades {
+    scroll-margin-top: 10rem; 
+}
+
 .seccion-actividades {
     padding: 5rem 2rem;
     background-color: #f9f9f9;
