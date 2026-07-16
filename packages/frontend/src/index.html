@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="css/sobreNosotros.css">
     <link rel="stylesheet" href="css/voluntariado.css">
+    <link rel="stylesheet" href="css/actividades.css">
     <link rel="icon" type="image/jpeg" href="img/LogoLlaveDelCamino.jpeg">
 </head>
 
@@ -190,6 +191,202 @@
                 <a href="#contacto" class="btn-orange" id="tallerModalCta"></a>
             </div>
         </div>
+
+        <!-- ACTIVIDADES / GALERÍA -->
+        <div class="actividad-modal-overlay" id="actividadModalOverlay">
+            <div class="actividad-modal" role="dialog" aria-modal="true" aria-labelledby="actividadModalTitulo">
+                <button class="actividad-modal-cerrar" id="actividadModalCerrar" aria-label="Cerrar">&times;</button>
+                <div class="actividad-modal-img-container">
+                    <img src="" id="actividadModalImg" alt="">
+                </div>
+                <div class="actividad-modal-info">
+                    <h3 id="actividadModalTitulo"></h3>
+                    <p id="actividadModalDescripcion"></p>
+                </div>
+            </div>
+        </div>
+
+        <section class="seccion-actividades" id="actividades">
+            <div class="section-header">
+                <span class="section-tag">Nuestra Trayectoria</span>
+                <h2 class="section-title">Actividades e Impacto Institucional</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Un recorrido visual por nuestras acciones comunitarias, encuentros institucionales y el crecimiento de nuestro espacio.</p>
+            </div>
+
+            <div class="carrusel-container">
+                <div class="carrusel-track">
+
+                    <div class="carrusel-item" 
+                        data-titulo="Prevención en el Deporte" 
+                        data-descripcion="Actividad en el gimnasio enfocada en la prevención del consumo problemático a través de las prácticas deportivas.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/prevencion-deporte.jpeg" alt="Prevención del consumo problemático en el deporte">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Prevención en el Deporte</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                        data-titulo="Reunión Institucional" 
+                        data-descripcion="El día 26 de junio en Casa Rosada se entregó una carpeta institucional con todo el trabajo que se viene haciendo y con todos los proyectos que tiene la asociación civil La Llave del Camino. Fue dirigida al presidente Javier Milei.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/reunion-institucional.jpeg" alt="Entrega de carpeta en Casa Rosada">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Reunión Institucional</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                        data-titulo="Madres Territoriales" 
+                        data-descripcion="Acción comunitaria y de articulación junto a la organización Madres Territoriales - Línea Fundadora.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/madres-territoriales.jpeg" alt="Madres Territoriales Línea Fundadora">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Madres Territoriales</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                         data-titulo="Espacio de Mujeres" 
+                         data-descripcion="Desarrollo de las actividades, talleres y encuentros comunitarios específicos de este sector.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/espacio-mujeres.jpeg" alt="Espacio de Mujeres">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Espacio de Mujeres</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                         data-titulo="Evento Solidario" 
+                         data-descripcion="Evento solidario con el apoyo del Dr. Horacio Tabares. También nos acompañaron José Luis Pietro y Vicente Fornet, escritores de los libros 'Reflexiones para el alma'.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/evento-solidario-1.jpeg" alt="Evento solidario">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Evento Solidario</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                         data-titulo="Prensa y Difusión" 
+                         data-descripcion="Invitación y participación en programas de radio en Uruguay FM 91.9 MHz ('Hablemos con Lina') para visibilizar el trabajo territorial y comunitario de la ONG La Llave del Camino.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/radio.jpg" alt="Prensa y Difusión en radio">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Prensa y Difusión</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                         data-titulo="Encuentro en el Senado" 
+                         data-descripcion="Fotos del Senado de la Nación cuando la presidenta de La Llave del Camino, Gabriela Milioto, fue convocada para participar del debate sobre la reforma de la ley de Salud Mental que se trata en el Senado. Se invitó a profesionales de toda la Argentina para debatir si debe existir una reforma o si la ley actual debe continuar igual.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/senado.jpeg" alt="Senado de la Nación">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Encuentro en el Senado</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                         data-titulo="Infraestructura" 
+                         data-descripcion="Registro fotográfico de las obras de restauración, pintura y puesta en valor de la sede actual de nuestra organización.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/infraestructura.jpeg" alt="Obras en la sede">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Infraestructura y Crecimiento</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                         data-titulo="Congreso en Buenos Aires" 
+                         data-descripcion="Participación activa y debate institucional en el marco del Congreso nacional desarrollado en Buenos Aires.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/congreso.jpeg" alt="Congreso de la ONG">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Congreso en Buenos Aires</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                         data-titulo="Acción Comunitaria" 
+                         data-descripcion="Jornada de corte de cabello totalmente gratuito realizada en el centro de día de la asociación civil La Llave del Camino, en colaboración con la escuela de peluquería Norma Castro.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/corte.jpeg" alt="Corte de cabello gratuito">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Acción Comunitaria</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+
+                    <div class="carrusel-item" 
+                         data-titulo="Talleres de Capacitación" 
+                         data-descripcion="Taller de prevención integral llevado a cabo con estudiantes de 4° y 5° año en una escuela secundaria de Rosario, provincia de Santa Fe. En el espacio no solo se abordó la prevención de adicciones sino también violencias y dinámicas de resolución pacífica de conflictos.">
+                        <div class="carrusel-img-wrapper">
+                            <img src="../img/capacitacion (1).jpeg" alt="Capacitación secundaria Rosario">
+                            <div class="carrusel-item-overlay">
+                                <span>Ver más detalles</span>
+                            </div>
+                        </div>
+                        <div class="carrusel-item-bar">
+                            <h4>Talleres de Capacitación</h4>
+                            <span class="carrusel-item-btn">+</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <button class="carrusel-btn btn-prev" aria-label="Anterior">&#10094;</button>
+                <button class="carrusel-btn btn-next" aria-label="Siguiente">&#10095;</button>
+            </div>
+        </section>
 
         <!-- SOBRE NOSOTROS -->
         <section id="SobreNosotros" class="seccion-sobreNosotros">
