@@ -103,7 +103,6 @@
     line-height: 1.5;
 }
 
-/* Cierre */
 .voluntariado-cierre {
     text-align: center;
     font-family: var(--font-heading);
@@ -146,7 +145,7 @@
     font-size: 1.8rem;
 }
 
-/* Responsivo */
+/* Responsive */
 @media (max-width: 768px) {
     .voluntariado-intro {
         grid-template-columns: 1fr;
