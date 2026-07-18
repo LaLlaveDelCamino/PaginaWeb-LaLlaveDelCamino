@@ -1,598 +1,703 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Llave del Camino</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/talleres.css">
-    <link rel="stylesheet" href="css/proyectos.css">
-    <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/sobreNosotros.css">
-    <link rel="stylesheet" href="css/voluntariado.css">
-    <link rel="stylesheet" href="css/actividades.css">
-    <link rel="icon" type="image/jpeg" href="img/LogoLlaveDelCamino.jpeg">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/talleres.css" />
+    <link rel="stylesheet" href="css/proyectos.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+    <link rel="stylesheet" href="css/sobreNosotros.css" />
+    <link rel="stylesheet" href="css/actividades.css" />
+    <link rel="stylesheet" href="css/colaborar.css" />
+    <link rel="icon" type="image/jpeg" href="img/LogoLlaveDelCamino.jpeg" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="#inicio" class="logo">
-            <img src="img/LogoLlaveDelCamino.jpeg" alt="Logo La Llave del Camino">
-        </a>
+      <a href="#inicio" class="logo">
+        <img src="img/LogoLlaveDelCamino.jpeg" alt="Logo La Llave del Camino" />
+      </a>
 
-        <div class="hamburguer-menu" id="menuBtn">
-            <div class="line line-1"></div>
-            <div class="line line-2"></div>
-            <div class="line line-3"></div>
-        </div>
+      <div class="hamburguer-menu" id="menuBtn">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
 
-        <nav class="navbar" id="navbar">
-            <ul class="nav-list">
-                <li class="nav-item" style="--i: 1"><a href="#talleres" class="items">Talleres</a></li>
-                <li class="nav-item" style="--i: 2"><a href="#actividades" class="items">Actividades</a></li>
-                <li class="nav-item" style="--i: 3"><a href="#SobreNosotros" class="items">Sobre Nosotros</a></li>
-                <li class="nav-item" style="--i: 4"><a href="#Voluntariado" class="items">Voluntariado</a></li>
-                <li class="nav-item" style="--i: 5"><a href="#contacto" class="items">Contacto</a></li>
-                <li>
-                    <button id="contrast-toggle" class="contrast-btn" aria-label="Cambiar modo de contraste"
-                        title="Activar modo de alta legibilidad">
-                        <svg id="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </nav>
+      <nav class="navbar" id="navbar">
+        <ul class="nav-list">
+          <li class="nav-item" style="--i: 1">
+            <a href="#talleres" class="items">Talleres</a>
+          </li>
+          <li class="nav-item" style="--i: 2">
+            <a href="#actividades" class="items">Actividades</a>
+          </li>
+          <li class="nav-item" style="--i: 3">
+            <a href="#SobreNosotros" class="items">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item" style="--i: 4">
+            <a href="#voluntariado" class="items">Voluntariado</a>
+          </li>
+          <li class="nav-item" style="--i: 5">
+            <a href="#contacto" class="items">Contacto</a>
+          </li>
+          <li class="nav-item" style="--i: 6">
+            <a href="#colaborar" class="items">Colaborar</a>
+          </li>
+          <li>
+            <button
+              id="contrast-toggle"
+              class="contrast-btn"
+              aria-label="Cambiar modo de contraste"
+              title="Activar modo de alta legibilidad"
+            >
+              <svg
+                id="theme-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <!-- ---- INICIO / HERO ---- -->
+      <div id="inicio"></div>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Un espacio de escucha, contención y oportunidades</h1>
+          <p>
+            Desde hace <span id="hero-trayectoria"></span> años acompañamos a
+            personas, familias y comunidades en Rosario, construyendo redes de
+            apoyo para la prevención y el abordaje integral de adicciones y
+            violencias.
+          </p>
+          <a href="#colaborar" class="btn-orange">Quiero colaborar</a>
+        </div>
+      </section>
 
-        <!-- ---- INICIO / HERO ---- -->
-        <div id="inicio"></div>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Un espacio de escucha, contención y oportunidades</h1>
-                <p>Desde hace <span id="hero-trayectoria"></span> años acompañamos a personas, familias y comunidades en
-                    Rosario, construyendo redes de apoyo para la prevención y el abordaje integral de adicciones y
-                    violencias.</p>
-                <a href="#contacto" class="btn-orange">Quiero colaborar</a>
-            </div>
-        </section>
+      <!-- ---- PILARES ---- -->
+      <section class="pilares">
+        <div class="section-header">
+          <span class="section-tag">Lo que hacemos</span>
+          <h2 class="section-title">Nuestros Ejes de Acción</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="pilares-container">
+          <div class="pilar-card">
+            <div class="pilar-icon"><i class="bi bi-house-heart"></i></div>
+            <h3>Centro de Día</h3>
+            <p>
+              Prevención y asistencia integral para mujeres desde los 8 años en
+              situación de vulnerabilidad.
+            </p>
+          </div>
+          <div class="pilar-card">
+            <div class="pilar-icon"><i class="bi bi-tools"></i></div>
+            <h3>Talleres y Capacitación</h3>
+            <p>
+              Espacios de arteterapia, tejido, panificado para aprender, música,
+              taller de arte y cocina kids, marroquineria.
+            </p>
+          </div>
+          <div class="pilar-card">
+            <div class="pilar-icon"><i class="bi bi-people"></i></div>
+            <h3>Prevención Comunitaria</h3>
+            <p>
+              Abordaje activo en colegios de Rosario y en ámbitos deportivos
+              para la prevención y contención de adicciones y violencias.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!-- ---- PILARES ---- -->
-        <section class="pilares">
-            <div class="section-header">
-                <span class="section-tag">Lo que hacemos</span>
-                <h2 class="section-title">Nuestros Ejes de Acción</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="pilares-container">
-                <div class="pilar-card">
-                    <div class="pilar-icon"><i class="bi bi-house-heart"></i></div>
-                    <h3>Centro de Día</h3>
-                    <p>Prevención y asistencia integral para mujeres desde los 8 años en situación de vulnerabilidad.
-                    </p>
-                </div>
-                <div class="pilar-card">
-                    <div class="pilar-icon"><i class="bi bi-tools"></i></div>
-                    <h3>Talleres y Capacitación</h3>
-                    <p>Espacios de arteterapia, tejido, panificado para aprender, música, taller de arte y cocina kids,
-                        marroquineria.
-                    </p>
-                </div>
-                <div class="pilar-card">
-                    <div class="pilar-icon"><i class="bi bi-people"></i></div>
-                    <h3>Prevención Comunitaria</h3>
-                    <p>Abordaje activo en colegios de Rosario y en ámbitos deportivos para la prevención y contención de
-                        adicciones y violencias.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ---- PROYECTOS ---- -->
-        <section class="seccion-proyectos" id="proyectos">
-            <div class="section-header">
-                <h2 class="section-title">Proyectos</h2>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="proyectos-timeline">
-                <article class="proyecto-item">
-                    <div class="proyecto-icono"><i class="bi bi-house-door"></i></div>
-                    <div class="proyecto-texto">
-                        <h3>Refugio</h3>
-                        <p>Para personas en situación de calle</p>
-                    </div>
-                </article>
-
-                <article class="proyecto-item">
-                    <div class="proyecto-icono"><i class="bi bi-door-open"></i></div>
-                    <div class="proyecto-texto">
-                        <h3>Casa de medio camino</h3>
-                        <p>Para mujeres y hombres</p>
-                    </div>
-                </article>
-
-                <article class="proyecto-item">
-                    <div class="proyecto-icono"><i class="bi bi-hearts"></i></div>
-                    <div class="proyecto-texto">
-                        <h3>Casa de contención</h3>
-                        <p>Para niñas adolescentes</p>
-                    </div>
-                </article>
-
-                <article class="proyecto-item">
-                    <div class="proyecto-icono"><i class="bi bi-heart-pulse"></i></div>
-                    <div class="proyecto-texto">
-                        <h3>Casa de Rehabilitación</h3>
-                        <p>Para mujeres junto a sus hijos menores de edad</p>
-                    </div>
-                </article>
-
-                <article class="proyecto-item proyecto-item--activo">
-                    <div class="proyecto-icono"><i class="bi bi-sun"></i></div>
-                    <div class="proyecto-texto">
-                        <h3>Centro de día <span class="badge-activo">ACTIVO</span></h3>
-                        <p>Para mujeres y sus niños/as</p>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- ---- IMPACTO ---- -->
-        <section class="impacto">
-            <div class="impacto-container">
-                <div class="impacto-item">
-                    <span class="number" id="anios-trayectoria"></span>
-                    <p>Años de trayectoria</p>
-                </div>
-                <div class="impacto-item">
-                    <span class="number">+150</span>
-                    <p>Personas acompañadas</p>
-                </div>
-                <div class="impacto-item">
-                    <span class="number"><i class="bi bi-check-circle-fill"></i></span>
-                    <p>Todos los talleres activos</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ---- TALLERES ---- -->
-        <section class="seccion-talleres" id="talleres">
-            <div class="section-header">
-                <span class="section-tag">Nuestras Actividades</span>
-                <h2 class="section-title">Talleres y Capacitación</h2>
-                <p class="section-subtitle">Espacios de encuentro, aprendizaje, creatividad y acompañamiento para todas
-                    las edades en el Centro de Día.</p>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="talleres-grid" id="talleresGrid"></div>
-            <div class="talleres-acordeon" id="talleresAcordeon"></div>
-        </section>
-
-        <div class="taller-modal-overlay" id="tallerModalOverlay">
-            <div class="taller-modal" role="dialog" aria-modal="true" aria-labelledby="tallerModalTitulo">
-                <button class="taller-modal-cerrar" id="tallerModalCerrar" aria-label="Cerrar">&times;</button>
-                <div class="taller-modal-icono"><i id="tallerModalIcono"></i></div>
-                <span class="taller-modal-horario" id="tallerModalHorario"></span>
-                <h3 id="tallerModalTitulo"></h3>
-                <p id="tallerModalDescripcion"></p>
-                <a href="#contacto" class="btn-orange" id="tallerModalCta"></a>
-            </div>
+      <!-- ---- PROYECTOS ---- -->
+      <section class="seccion-proyectos" id="proyectos">
+        <div class="section-header">
+          <h2 class="section-title">Proyectos</h2>
+          <div class="section-divider"></div>
         </div>
 
-        <!-- ACTIVIDADES / GALERÍA -->
-        <div class="actividad-modal-overlay" id="actividadModalOverlay">
-            <div class="actividad-modal" role="dialog" aria-modal="true" aria-labelledby="actividadModalTitulo">
-                <button class="actividad-modal-cerrar" id="actividadModalCerrar" aria-label="Cerrar">&times;</button>
-                <div class="actividad-modal-img-container">
-                    <img src="" id="actividadModalImg" alt="">
-                </div>
-                <div class="actividad-modal-info">
-                    <h3 id="actividadModalTitulo"></h3>
-                    <p id="actividadModalDescripcion"></p>
-                </div>
+        <div class="proyectos-timeline">
+          <article class="proyecto-item">
+            <div class="proyecto-icono"><i class="bi bi-house-door"></i></div>
+            <div class="proyecto-texto">
+              <h3>Refugio</h3>
+              <p>Para personas en situación de calle</p>
             </div>
+          </article>
+
+          <article class="proyecto-item">
+            <div class="proyecto-icono"><i class="bi bi-door-open"></i></div>
+            <div class="proyecto-texto">
+              <h3>Casa de medio camino</h3>
+              <p>Para mujeres y hombres</p>
+            </div>
+          </article>
+
+          <article class="proyecto-item">
+            <div class="proyecto-icono"><i class="bi bi-hearts"></i></div>
+            <div class="proyecto-texto">
+              <h3>Casa de contención</h3>
+              <p>Para niñas adolescentes</p>
+            </div>
+          </article>
+
+          <article class="proyecto-item">
+            <div class="proyecto-icono"><i class="bi bi-heart-pulse"></i></div>
+            <div class="proyecto-texto">
+              <h3>Casa de Rehabilitación</h3>
+              <p>Para mujeres junto a sus hijos menores de edad</p>
+            </div>
+          </article>
+
+          <article class="proyecto-item proyecto-item--activo">
+            <div class="proyecto-icono"><i class="bi bi-sun"></i></div>
+            <div class="proyecto-texto">
+              <h3>Centro de día <span class="badge-activo">ACTIVO</span></h3>
+              <p>Para mujeres y sus niños/as</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---- IMPACTO ---- -->
+      <section class="impacto">
+        <div class="impacto-container">
+          <div class="impacto-item">
+            <span class="number" id="anios-trayectoria"></span>
+            <p>Años de trayectoria</p>
+          </div>
+          <div class="impacto-item">
+            <span class="number">+150</span>
+            <p>Personas acompañadas</p>
+          </div>
+          <div class="impacto-item">
+            <span class="number"><i class="bi bi-check-circle-fill"></i></span>
+            <p>Todos los talleres activos</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---- TALLERES ---- -->
+      <section class="seccion-talleres" id="talleres">
+        <div class="section-header">
+          <span class="section-tag">Nuestras Actividades</span>
+          <h2 class="section-title">Talleres y Capacitación</h2>
+          <p class="section-subtitle">
+            Espacios de encuentro, aprendizaje, creatividad y acompañamiento
+            para todas las edades en el Centro de Día.
+          </p>
+          <div class="section-divider"></div>
         </div>
 
-        <section class="seccion-actividades" id="actividades">
-            <div class="section-header">
-                <span class="section-tag">Nuestra Trayectoria</span>
-                <h2 class="section-title">Actividades e Impacto Institucional</h2>
-                <div class="section-divider"></div>
-                <p class="section-subtitle">Un recorrido visual por nuestras acciones comunitarias, encuentros institucionales y el crecimiento de nuestro espacio.</p>
+        <div class="talleres-grid" id="talleresGrid"></div>
+        <div class="talleres-acordeon" id="talleresAcordeon"></div>
+      </section>
+
+      <div class="taller-modal-overlay" id="tallerModalOverlay">
+        <div
+          class="taller-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="tallerModalTitulo"
+        >
+          <button
+            class="taller-modal-cerrar"
+            id="tallerModalCerrar"
+            aria-label="Cerrar"
+          >
+            &times;
+          </button>
+          <div class="taller-modal-icono"><i id="tallerModalIcono"></i></div>
+          <span class="taller-modal-horario" id="tallerModalHorario"></span>
+          <h3 id="tallerModalTitulo"></h3>
+          <p id="tallerModalDescripcion"></p>
+          <a href="#contacto" class="btn-orange" id="tallerModalCta"></a>
+        </div>
+      </div>
+
+      <!-- ACTIVIDADES / GALERÍA -->
+      <div class="actividad-modal-overlay" id="actividadModalOverlay">
+        <div
+          class="actividad-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="actividadModalTitulo"
+        >
+          <button
+            class="actividad-modal-cerrar"
+            id="actividadModalCerrar"
+            aria-label="Cerrar"
+          >
+            &times;
+          </button>
+          <div class="actividad-modal-img-container">
+            <img src="" id="actividadModalImg" alt="" />
+          </div>
+          <div class="actividad-modal-info">
+            <h3 id="actividadModalTitulo"></h3>
+            <p id="actividadModalDescripcion"></p>
+          </div>
+        </div>
+      </div>
+
+      <section class="seccion-actividades" id="actividades">
+        <div class="section-header">
+          <span class="section-tag">Nuestra Trayectoria</span>
+          <h2 class="section-title">Actividades e Impacto Institucional</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Un recorrido visual por nuestras acciones comunitarias, encuentros
+            institucionales y el crecimiento de nuestro espacio.
+          </p>
+        </div>
+
+        <div class="carrusel-container">
+          <div class="carrusel-track">
+            <div
+              class="carrusel-item"
+              data-titulo="Prevención en el Deporte"
+              data-descripcion="Actividad en el gimnasio enfocada en la prevención del consumo problemático a través de las prácticas deportivas."
+            >
+              <div class="carrusel-img-wrapper">
+                <img
+                  src="../img/prevencion-deporte.jpeg"
+                  alt="Prevención del consumo problemático en el deporte"
+                />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
+                </div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Prevención en el Deporte</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
             </div>
 
-            <div class="carrusel-container">
-                <div class="carrusel-track">
-
-                    <div class="carrusel-item" 
-                        data-titulo="Prevención en el Deporte" 
-                        data-descripcion="Actividad en el gimnasio enfocada en la prevención del consumo problemático a través de las prácticas deportivas.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/prevencion-deporte.jpeg" alt="Prevención del consumo problemático en el deporte">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Prevención en el Deporte</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                        data-titulo="Reunión Institucional" 
-                        data-descripcion="El día 26 de junio en Casa Rosada se entregó una carpeta institucional con todo el trabajo que se viene haciendo y con todos los proyectos que tiene la asociación civil La Llave del Camino. Fue dirigida al presidente Javier Milei.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/reunion-institucional.jpeg" alt="Entrega de carpeta en Casa Rosada">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Reunión Institucional</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                        data-titulo="Madres Territoriales" 
-                        data-descripcion="Acción comunitaria y de articulación junto a la organización Madres Territoriales - Línea Fundadora.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/madres-territoriales.jpeg" alt="Madres Territoriales Línea Fundadora">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Madres Territoriales</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                         data-titulo="Espacio de Mujeres" 
-                         data-descripcion="Desarrollo de las actividades, talleres y encuentros comunitarios específicos de este sector.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/espacio-mujeres.jpeg" alt="Espacio de Mujeres">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Espacio de Mujeres</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                         data-titulo="Evento Solidario" 
-                         data-descripcion="Evento solidario con el apoyo del Dr. Horacio Tabares. También nos acompañaron José Luis Pietro y Vicente Fornet, escritores de los libros 'Reflexiones para el alma'.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/evento-solidario-1.jpeg" alt="Evento solidario">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Evento Solidario</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                         data-titulo="Prensa y Difusión" 
-                         data-descripcion="Invitación y participación en programas de radio en Uruguay FM 91.9 MHz ('Hablemos con Lina') para visibilizar el trabajo territorial y comunitario de la ONG La Llave del Camino.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/radio.jpg" alt="Prensa y Difusión en radio">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Prensa y Difusión</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                         data-titulo="Encuentro en el Senado" 
-                         data-descripcion="Fotos del Senado de la Nación cuando la presidenta de La Llave del Camino, Gabriela Milioto, fue convocada para participar del debate sobre la reforma de la ley de Salud Mental que se trata en el Senado. Se invitó a profesionales de toda la Argentina para debatir si debe existir una reforma o si la ley actual debe continuar igual.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/senado.jpeg" alt="Senado de la Nación">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Encuentro en el Senado</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                         data-titulo="Infraestructura" 
-                         data-descripcion="Registro fotográfico de las obras de restauración, pintura y puesta en valor de la sede actual de nuestra organización.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/infraestructura.jpeg" alt="Obras en la sede">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Infraestructura y Crecimiento</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                         data-titulo="Congreso en Buenos Aires" 
-                         data-descripcion="Participación activa y debate institucional en el marco del Congreso nacional desarrollado en Buenos Aires.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/congreso.jpeg" alt="Congreso de la ONG">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Congreso en Buenos Aires</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                         data-titulo="Acción Comunitaria" 
-                         data-descripcion="Jornada de corte de cabello totalmente gratuito realizada en el centro de día de la asociación civil La Llave del Camino, en colaboración con la escuela de peluquería Norma Castro.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/corte.jpeg" alt="Corte de cabello gratuito">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Acción Comunitaria</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
-
-                    <div class="carrusel-item" 
-                         data-titulo="Talleres de Capacitación" 
-                         data-descripcion="Taller de prevención integral llevado a cabo con estudiantes de 4° y 5° año en una escuela secundaria de Rosario, provincia de Santa Fe. En el espacio no solo se abordó la prevención de adicciones sino también violencias y dinámicas de resolución pacífica de conflictos.">
-                        <div class="carrusel-img-wrapper">
-                            <img src="img/capacitacion (1).jpeg" alt="Capacitación secundaria Rosario">
-                            <div class="carrusel-item-overlay">
-                                <span>Ver más detalles</span>
-                            </div>
-                        </div>
-                        <div class="carrusel-item-bar">
-                            <h4>Talleres de Capacitación</h4>
-                            <span class="carrusel-item-btn">+</span>
-                        </div>
-                    </div>
+            <div
+              class="carrusel-item"
+              data-titulo="Reunión Institucional"
+              data-descripcion="El día 26 de junio en Casa Rosada se entregó una carpeta institucional con todo el trabajo que se viene haciendo y con todos los proyectos que tiene la asociación civil La Llave del Camino. Fue dirigida al presidente Javier Milei."
+            >
+              <div class="carrusel-img-wrapper">
+                <img
+                  src="../img/reunion-institucional.jpeg"
+                  alt="Entrega de carpeta en Casa Rosada"
+                />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
                 </div>
-        
-                <button class="carrusel-btn btn-prev" aria-label="Anterior">&#10094;</button>
-                <button class="carrusel-btn btn-next" aria-label="Siguiente">&#10095;</button>
-            </div>
-        </section>
-
-        <!-- SOBRE NOSOTROS -->
-        <section id="SobreNosotros" class="seccion-sobreNosotros">
-            <div class="section-header">
-                <h2 class="section-title">Sobre Nosotros</h2>
-                <div class="section-divider"></div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Reunión Institucional</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
             </div>
 
-            <div class="about-content-wrapper">
-                <div class="about-top">
-                    <div class="about-logo">
-                        <img src="img/LogoLlaveDelCamino.jpeg" alt="Logo La Llave del Camino">
-                    </div>
-                    <div class="about-block">
-                        <h2>¿Quiénes somos?</h2>
-                        <p>Somos una ONG sin fines de lucro que acompaña a personas y familias en situación de consumos
-                            problemáticos, violencias y vulnerabilidad.</p>
-                        <p>Nuestro objetivo es realizar acciones preventivas y de ayuda psicosocial para mejorar la
-                            calidad de vida en áreas de salud, educación, familia, cultura, laboral y social.</p>
-                    </div>
+            <div
+              class="carrusel-item"
+              data-titulo="Madres Territoriales"
+              data-descripcion="Acción comunitaria y de articulación junto a la organización Madres Territoriales - Línea Fundadora."
+            >
+              <div class="carrusel-img-wrapper">
+                <img
+                  src="../img/madres-territoriales.jpeg"
+                  alt="Madres Territoriales Línea Fundadora"
+                />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
                 </div>
-
-                <div class="about-bottom">
-                    <h2>¿Qué hacemos?</h2>
-                    <ul class="lista-que-hacemos">
-                        <li><i class="bi bi-check-lg"></i> Primera escucha</li>
-                        <li><i class="bi bi-check-lg"></i> Atención y asesoramiento psicosocial</li>
-                        <li><i class="bi bi-check-lg"></i> Asesoramiento jurídico</li>
-                        <li><i class="bi bi-check-lg"></i> Defensa de derechos</li>
-                        <li><i class="bi bi-check-lg"></i> Prevención de consumos problemáticos y violencias</li>
-                        <li><i class="bi bi-check-lg"></i> Formación de preventores</li>
-                        <li><i class="bi bi-check-lg"></i> Grupo virtual para familiares de personas que consumen
-                            sustancias psicoactivas</li>
-                        <li><i class="bi bi-check-lg"></i> Capacitaciones</li>
-                        <li><i class="bi bi-check-lg"></i> Actividades recreativas, culturales y artísticas</li>
-                        <li><i class="bi bi-check-lg"></i> Grupos terapéuticos</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- ---- VOLUNTARIADO ---- -->
-        <section id="Voluntariado" class="seccion-voluntariado">
-            <div class="section-header">
-                <h2 class="section-title">Voluntariado</h2>
-                <div class="section-divider"></div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Madres Territoriales</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
             </div>
 
-            <div class="voluntariado-content-wrapper">
-
-                <div class="voluntariado-intro">
-                    <div class="voluntariado-img">
-                        <img src="img/voluntariado.jpeg" alt="Manos formando un corazón">
-                    </div>
-                    <div class="voluntariado-quote">
-                        <p>No hay un corazón más grande que el de un <span>voluntario</span>.</p>
-                    </div>
+            <div
+              class="carrusel-item"
+              data-titulo="Espacio de Mujeres"
+              data-descripcion="Desarrollo de las actividades, talleres y encuentros comunitarios específicos de este sector."
+            >
+              <div class="carrusel-img-wrapper">
+                <img
+                  src="../img/espacio-mujeres.jpeg"
+                  alt="Espacio de Mujeres"
+                />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
                 </div>
-
-                <div class="voluntariado-texto">
-                    <h3>¡Sumate al voluntariado de La Llave del Camino!</h3>
-                    <p class="voluntariado-preguntas">¿Tenés unas horas por semana para compartir? ¿Hay algo que sabés
-                        hacer y te gustaría poner al servicio de los demás?</p>
-                    <p class="voluntariado-bajada">
-                        <strong>Buscamos personas con ganas de colaborar.</strong><br>
-                        No importa cuál sea tu experiencia, siempre hay una forma de ayudar.
-                    </p>
-                </div>
-
-                <div class="voluntariado-colabora">
-                    <h3>Podés colaborar:</h3>
-                    <div class="colabora-grid">
-                        <div class="colabora-item">
-                            <i class="bi bi-cup-hot"></i>
-                            <p>Cocinando</p>
-                        </div>
-                        <div class="colabora-item">
-                            <i class="bi bi-brush"></i>
-                            <p>Limpiando y ordenando espacios</p>
-                        </div>
-                        <div class="colabora-item">
-                            <i class="bi bi-tools"></i>
-                            <p>Realizando pequeñas reparaciones</p>
-                        </div>
-                        <div class="colabora-item">
-                            <i class="bi bi-lightbulb"></i>
-                            <p>Compartiendo alguna habilidad</p>
-                        </div>
-                        <div class="colabora-item">
-                            <i class="bi bi-clipboard-check"></i>
-                            <p>Ayudando en la organización de actividades y eventos</p>
-                        </div>
-                        <div class="colabora-item">
-                            <i class="bi bi-clock-history"></i>
-                            <p>O simplemente ofreciendo tu tiempo y compromiso</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="voluntariado-cierre">Cada gesto cuenta. Cada hora compartida puede transformar una vida.
-                    <i class="bi bi-heart-fill"></i>
-                </p>
-
-                <div class="voluntariado-cta">
-                    <a href="https://wa.me/5493412710103?text=Hola!%20Quiero%20sumarme%20al%20voluntariado%20de%20La%20Llave%20del%20Camino"
-                        class="btn-voluntariado" target="_blank">
-                        <i class="bi bi-whatsapp"></i>
-                        Quiero ser voluntario/a
-                    </a>
-                </div>
-
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Espacio de Mujeres</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
             </div>
-        </section>
 
-        <!-- ---- CONTACTO ---- -->
-        <section class="contacto" id="contacto">
-            <div class="section-header">
-                <h2 class="section-title">Contacto</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="contacto-container">
-                <div class="contacto-info">
-                    <h3>Información de contacto</h3>
-                    <div class="info-item">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <p>Rosario, Santa Fe</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="bi bi-envelope-fill"></i>
-                        <p>contacto@lallavedelcamino.org</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="bi bi-telephone-fill"></i>
-                        <p>+54 9 341 271 0103</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="bi bi-instagram"></i>
-                        <p>@la_llave_de_camino</p>
-                    </div>
+            <div
+              class="carrusel-item"
+              data-titulo="Evento Solidario"
+              data-descripcion="Evento solidario con el apoyo del Dr. Horacio Tabares. También nos acompañaron José Luis Pietro y Vicente Fornet, escritores de los libros 'Reflexiones para el alma'."
+            >
+              <div class="carrusel-img-wrapper">
+                <img
+                  src="../img/evento-solidario-1.jpeg"
+                  alt="Evento solidario"
+                />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
                 </div>
-                <div class="contacto-form">
-                    <h3>Envíanos un mensaje</h3>
-                    <form id="contactForm">
-                        <input type="text" id="nombre" placeholder="Nombre completo" required>
-                        <input type="email" id="email" placeholder="Correo electrónico" required>
-                        <input type="tel" id="telefono" placeholder="Teléfono">
-                        <textarea id="mensaje" rows="6" placeholder="Escribe tu mensaje" required></textarea>
-                        <button type="submit" class="btn-orange">Enviar mensaje</button>
-                    </form>
-                </div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Evento Solidario</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
             </div>
-        </section>
 
+            <div
+              class="carrusel-item"
+              data-titulo="Prensa y Difusión"
+              data-descripcion="Invitación y participación en programas de radio en Uruguay FM 91.9 MHz ('Hablemos con Lina') para visibilizar el trabajo territorial y comunitario de la ONG La Llave del Camino."
+            >
+              <div class="carrusel-img-wrapper">
+                <img src="../img/radio.jpg" alt="Prensa y Difusión en radio" />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
+                </div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Prensa y Difusión</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
+            </div>
+
+            <div
+              class="carrusel-item"
+              data-titulo="Encuentro en el Senado"
+              data-descripcion="Fotos del Senado de la Nación cuando la presidenta de La Llave del Camino, Gabriela Milioto, fue convocada para participar del debate sobre la reforma de la ley de Salud Mental que se trata en el Senado. Se invitó a profesionales de toda la Argentina para debatir si debe existir una reforma o si la ley actual debe continuar igual."
+            >
+              <div class="carrusel-img-wrapper">
+                <img src="../img/senado.jpeg" alt="Senado de la Nación" />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
+                </div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Encuentro en el Senado</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
+            </div>
+
+            <div
+              class="carrusel-item"
+              data-titulo="Infraestructura"
+              data-descripcion="Registro fotográfico de las obras de restauración, pintura y puesta en valor de la sede actual de nuestra organización."
+            >
+              <div class="carrusel-img-wrapper">
+                <img src="../img/infraestructura.jpeg" alt="Obras en la sede" />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
+                </div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Infraestructura y Crecimiento</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
+            </div>
+
+            <div
+              class="carrusel-item"
+              data-titulo="Congreso en Buenos Aires"
+              data-descripcion="Participación activa y debate institucional en el marco del Congreso nacional desarrollado en Buenos Aires."
+            >
+              <div class="carrusel-img-wrapper">
+                <img src="../img/congreso.jpeg" alt="Congreso de la ONG" />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
+                </div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Congreso en Buenos Aires</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
+            </div>
+
+            <div
+              class="carrusel-item"
+              data-titulo="Acción Comunitaria"
+              data-descripcion="Jornada de corte de cabello totalmente gratuito realizada en el centro de día de la asociación civil La Llave del Camino, en colaboración con la escuela de peluquería Norma Castro."
+            >
+              <div class="carrusel-img-wrapper">
+                <img src="../img/corte.jpeg" alt="Corte de cabello gratuito" />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
+                </div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Acción Comunitaria</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
+            </div>
+
+            <div
+              class="carrusel-item"
+              data-titulo="Talleres de Capacitación"
+              data-descripcion="Taller de prevención integral llevado a cabo con estudiantes de 4° y 5° año en una escuela secundaria de Rosario, provincia de Santa Fe. En el espacio no solo se abordó la prevención de adicciones sino también violencias y dinámicas de resolución pacífica de conflictos."
+            >
+              <div class="carrusel-img-wrapper">
+                <img
+                  src="../img/capacitacion (1).jpeg"
+                  alt="Capacitación secundaria Rosario"
+                />
+                <div class="carrusel-item-overlay">
+                  <span>Ver más detalles</span>
+                </div>
+              </div>
+              <div class="carrusel-item-bar">
+                <h4>Talleres de Capacitación</h4>
+                <span class="carrusel-item-btn">+</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="carrusel-btn btn-prev" aria-label="Anterior">
+            &#10094;
+          </button>
+          <button class="carrusel-btn btn-next" aria-label="Siguiente">
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <!-- SOBRE NOSOTROS -->
+      <section id="SobreNosotros" class="seccion-sobreNosotros">
+        <div class="section-header">
+          <h2 class="section-title">Sobre Nosotros</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-content-wrapper">
+          <div class="about-top">
+            <div class="about-logo">
+              <img
+                src="img/LogoLlaveDelCamino.jpeg"
+                alt="Logo La Llave del Camino"
+              />
+            </div>
+            <div class="about-block">
+              <h2>¿Quiénes somos?</h2>
+              <p>
+                Somos una ONG sin fines de lucro que acompaña a personas y
+                familias en situación de consumos problemáticos, violencias y
+                vulnerabilidad.
+              </p>
+              <p>
+                Nuestro objetivo es realizar acciones preventivas y de ayuda
+                psicosocial para mejorar la calidad de vida en áreas de salud,
+                educación, familia, cultura, laboral y social.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-bottom">
+            <h2>¿Qué hacemos?</h2>
+            <ul class="lista-que-hacemos">
+              <li><i class="bi bi-check-lg"></i> Primera escucha</li>
+              <li>
+                <i class="bi bi-check-lg"></i> Atención y asesoramiento
+                psicosocial
+              </li>
+              <li><i class="bi bi-check-lg"></i> Asesoramiento jurídico</li>
+              <li><i class="bi bi-check-lg"></i> Defensa de derechos</li>
+              <li>
+                <i class="bi bi-check-lg"></i> Prevención de consumos
+                problemáticos y violencias
+              </li>
+              <li><i class="bi bi-check-lg"></i> Formación de preventores</li>
+              <li>
+                <i class="bi bi-check-lg"></i> Grupo virtual para familiares de
+                personas que consumen sustancias psicoactivas
+              </li>
+              <li><i class="bi bi-check-lg"></i> Capacitaciones</li>
+              <li>
+                <i class="bi bi-check-lg"></i> Actividades recreativas,
+                culturales y artísticas
+              </li>
+              <li><i class="bi bi-check-lg"></i> Grupos terapéuticos</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---- COLABORACIÓN ---- -->
+      <section id="colaborar" class="seccion-donaciones">
+        <div class="donaciones-container">
+          <div class="section-header">
+            <h2 class="section-title">Apoyá nuestro espacio</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <p class="donaciones-intro">
+            Tu aporte nos ayuda a sostener los talleres comunitarios y las
+            acciones sociales que llevamos adelante día a día.
+          </p>
+
+          <div class="donaciones-bloque-datos">
+            <p class="donaciones-dato-item">
+              <span class="dato-label">Institución:</span>
+              <span class="dato-valor">Banco Credicoop</span>
+            </p>
+            <p class="donaciones-dato-item">
+              <span class="dato-label">Alias de CBU Oficial:</span>
+              <span class="dato-valor alias-resaltado">Llavedelcamino</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---- CONTACTO ---- -->
+      <section class="contacto" id="contacto">
+        <div class="section-header">
+          <h2 class="section-title">Contacto</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="contacto-container">
+          <div class="contacto-info">
+            <h3>Información de contacto</h3>
+            <div class="info-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <p>Rosario, Santa Fe</p>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-envelope-fill"></i>
+              <p>contacto@lallavedelcamino.org</p>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-telephone-fill"></i>
+              <p>+54 9 341 271 0103</p>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-instagram"></i>
+              <p>@la_llave_de_camino</p>
+            </div>
+          </div>
+          <div class="contacto-form">
+            <h3>Envíanos un mensaje</h3>
+            <form id="contactForm">
+              <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre completo"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                placeholder="Correo electrónico"
+                required
+              />
+              <input type="tel" id="telefono" placeholder="Teléfono" />
+              <textarea
+                id="mensaje"
+                rows="6"
+                placeholder="Escribe tu mensaje"
+                required
+              ></textarea>
+              <button type="submit" class="btn-orange">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-sections">
-            <div class="footer-col">
-                <h3>Datos de contacto</h3>
-                <p>Corrientes 3700, Rosario</p>
-                <p>Teléfono:
-                    <a href="https://wa.me/5493412710103" target="_blank"
-                        style="color: inherit; text-decoration: none;">
-                        +54 9 341 271 0103
-                    </a>
-                </p>
-            </div>
-
-            <div class="footer-col">
-                <h3>Navegación</h3>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#talleres">Talleres</a></li>
-                    <li><a href="#actividades">Actividades</a></li>
-                    <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
-                    <li><a href="#Voluntariado">Voluntariado</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h3>Síguenos</h3>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/la_llave_de_camino/" class="icon-circle" aria-label="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    <!--<a href="#" class="icon-circle" aria-label="Facebook">
-                    <i class="bi bi-facebook"></i>
-                </a>-->
-                </div>
-            </div>
+      <div class="footer-sections">
+        <div class="footer-col">
+          <h3>Datos de contacto</h3>
+          <p>Corrientes 3720, Rosario, Santa Fe, Argentina.</p>
+          <p>
+            Teléfono:
+            <a
+              href="https://wa.me/5493412710103"
+              target="_blank"
+              style="color: inherit; text-decoration: none"
+            >
+              +54 9 341 271 0103
+            </a>
+          </p>
         </div>
 
-        <hr class="footer-divider">
-
-        <div class="footer-bottom">
-            <p class="copyright">&copy; 2026 - La Llave del Camino</p>
+        <div class="footer-col">
+          <h3>Navegación</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#talleres">Talleres</a></li>
+            <li><a href="#actividades">Actividades</a></li>
+            <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
+            <li><a href="#voluntariado">Voluntariado</a></li>
+            <li><a href="#colaborar">Colaborar</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
         </div>
+
+        <div class="footer-col">
+          <h3>Síguenos</h3>
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/la_llave_de_camino/"
+              class="icon-circle"
+              aria-label="Instagram"
+            >
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61587262381760&rdid=QQGpGEKL4xzuJwcw&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Base6W3Ya%2F#"
+              class="icon-circle"
+              aria-label="Facebook"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 - La Llave del Camino</p>
+      </div>
     </footer>
 
-    <a href="https://wa.me/5493412710103" class="whatsapp-float" target="_blank">
-        <i class="bi bi-whatsapp"></i>
+    <a
+      href="https://wa.me/5493412710103"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="bi bi-whatsapp"></i>
     </a>
 
     <script src="js/script.js"></script>
-
-</body>
-
+  </body>
 </html>
