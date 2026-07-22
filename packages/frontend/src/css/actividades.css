@@ -4,7 +4,7 @@
 
 .seccion-actividades {
     padding: 5rem 2rem;
-    background-color: #f9f9f9;
+    background-color: var(--bg-color);
 }
 
 .carrusel-container {
@@ -122,7 +122,7 @@
     margin: 0;
     font-size: 1.6rem;
     font-weight: 700;
-    color: #2a3229;
+    color: var(--text-main);
 }
 
 .carrusel-item-btn {
@@ -251,7 +251,7 @@
 .actividad-modal-info p {
     font-size: 1.5rem;
     line-height: 1.7;
-    color: #444;
+    color: var(--text-muted);
     margin: 0;
 }
 
