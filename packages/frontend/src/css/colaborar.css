@@ -1,3 +1,7 @@
+#colaborar {
+    scroll-margin-top: 10rem; 
+}
+
 .seccion-donaciones {
   padding: 7rem 2rem;
   background-color: var(--brand-green);
@@ -203,4 +207,14 @@
       margin-right: auto;
     }
   }
+}
+
+body.high-contrast .donaciones-intro,
+body.high-contrast .donaciones-dato-item {
+    color: var(--text-main);
+    opacity: 1;
+}
+
+body.high-contrast .dato-label {
+    opacity: 1;
 }
