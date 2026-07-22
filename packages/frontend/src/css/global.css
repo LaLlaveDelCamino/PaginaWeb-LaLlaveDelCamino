@@ -479,7 +479,7 @@ footer a:hover {
     color: #D9A066;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 76.8rem) {
     .contrast-btn {
         display: block;
         border: 0.2rem solid white;
