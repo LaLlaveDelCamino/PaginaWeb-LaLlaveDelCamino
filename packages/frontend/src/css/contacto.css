@@ -22,6 +22,7 @@
     border-radius: 1.5rem;
     box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.05);
     border-bottom: 0.4rem solid var(--brand-green);
+    
 }
 
 .contacto-info h3,
@@ -61,7 +62,8 @@
 }
 
 .contacto-form textarea {
-    resize: vertical;
+    resize: none; 
+    width: 100%;
 }
 
 .contacto-form button.btn-orange {

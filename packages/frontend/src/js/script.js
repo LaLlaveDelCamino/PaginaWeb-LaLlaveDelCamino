@@ -51,7 +51,7 @@ Teléfono: ${telefono}
 
 Mensaje:
 ${mensaje}`;
-    const whatsappURL = "https://wa.me/5493425238984?text=" + encodeURIComponent(texto);
+const whatsappURL = "https://wa.me/5493412710103?text=" + encodeURIComponent(texto);
     window.open(whatsappURL, "_blank");
 });
 

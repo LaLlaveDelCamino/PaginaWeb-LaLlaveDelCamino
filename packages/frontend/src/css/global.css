@@ -407,6 +407,16 @@ footer a:hover {
     box-shadow: 0 1.5rem 3rem rgba(42, 59, 41, 0.18);
 }
 
+.contacto-info, .contacto-form {
+    transform: none !important;
+    transition: box-shadow 0.4s ease;
+}
+
+.contacto-info:hover, .contacto-form:hover {
+    transform: none !important; 
+    box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.05); 
+}
+
 /* ---- MEDIA QUERY DESKTOP ---- */
 @media (min-width: 76.8rem) {
     .hamburguer-menu {
