@@ -35,84 +35,49 @@ Desarrollar una página web simple, clara y accesible que permita:
 
 - Visibilizar la ONG
 - Generar confianza
-- Facilitar el contacto
+- Facilitar el contacto directo (Via Whatsapp)
 - Difundir actividades e información institucional
 
 ---
 
 ## 📁 Organización del proyecto
 
-El proyecto se encuentra organizado utilizando una estructura separada entre frontend y backend para mejorar la mantenibilidad y escalabilidad.
+El proyecto está organizado de forma limpia y directa para facilitar su mantenimiento:
 
 ```text
-packages/
-│
-├── backend/
-│   ├── public/
-│   ├── routes/
-│   └── ...
-│
-└── frontend/
-    ├── public/
-    └── src/
-        ├── css/
-        ├── pages/
-        └── ...
+/
+├── index.html          # Archivo principal de la página web
+├── css/
+│   └── styles.css      # Estilos globales, secciones y modo alto contraste
+├── js/
+│   └── main.js         # Lógica interactiva (menú, formularios y WhatsApp)
+└── img/                # Recursos gráficos y logotipos
 ```
+---
 
-### 🔹 Backend
+## ⚙️ Cómo ejecutar el proyecto localmente
+Dado que el sitio web utiliza tecnologías web nativas, no requiere procesos complejos de compilación:
 
-La carpeta `backend` contiene toda la lógica del servidor y manejo de datos.
+- Clona el repositorio en tu computadora.
 
-Ejemplos de contenido:
+- Abre la carpeta del proyecto en tu editor de código (por ejemplo, Visual Studio Code).
 
-- `routes/`  
-  Define las rutas y endpoints de la aplicación (por ejemplo: contacto, noticias, voluntariado).
-
-- `public/`  
-  Archivos públicos servidos por el backend, como imágenes, archivos estáticos o recursos compartidos.
-
-- `controllers/` *(a futuro)*  
-  Lógica asociada a cada endpoint.
-
-- `services/` *(a futuro)*  
-  Reglas de negocio y procesamiento de información.
-
-- `models/` *(a futuro)*  
-  Representación y manejo de datos.
+- Utiliza la extensión Live Server o abre directamente el archivo index.html en tu navegador web.
 
 ---
 
-### 🔹 Frontend
+## 📱 Características principales
+Diseño Responsive: Adaptado perfectamente para dispositivos móviles, tablets y computadoras de escritorio.
 
-La carpeta `frontend` contiene toda la interfaz visual de la página web.
+Integración con WhatsApp: El formulario de contacto procesa los datos ingresados por el usuario y genera automáticamente un mensaje directo listo para enviarse al número configurado.
 
-Ejemplos de contenido:
+Modo Alto Contraste: Funcionalidad de accesibilidad integrada para mejorar la lectura visual según las necesidades del usuario.
 
-- `public/`  
-  Recursos estáticos accesibles directamente desde el navegador.
-
-- `src/`  
-  Código fuente principal del frontend.
-
-Dentro de `src/`:
-
-- `css/`  
-  Archivos de estilos y diseño visual de la aplicación.
-
-- `pages/`  
-  Páginas o vistas principales del sitio web (inicio, contacto, nosotros, etc.).
-
-- `components/` *(a futuro)*  
-  Componentes reutilizables de interfaz.
-
-- `js/` o `scripts/` *(a futuro)*  
-  Lógica e interactividad del lado del cliente.
+Navegación Fluida: Desplazamiento suave (smooth scroll) entre las distintas secciones informativas (#inicio, #QuienesSomos, #talleres, #proyectos, #contacto, #colaborar).
 
 ---
 
-## 📂 Estado del proyecto
-
-🚧 En desarrollo
+## 🌐 Despliegue (Hosting)
+Actualmente, el sitio web se encuentra desplegado y optimizado para producción en https://lallavedelcamino.netlify.app/. Cualquier cambio que se suba a la rama main se reflejará en el entorno de producción según la configuración del servidor.
 
 
