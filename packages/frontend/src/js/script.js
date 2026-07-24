@@ -106,7 +106,6 @@ ${mensaje}`;
   ========================================================= */
   const DIAS = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
 
-  // Cada taller ya trae su índice (idx) para no depender de indexOf()
   const TALLERES = [
     { dia: 'Lunes', turno: 'Mañana', icono: 'bi-palette', titulo: 'Talleres de Arteterapia para Mujeres', desc: 'Un espacio de creatividad y expresión pensado para el bienestar emocional y el encuentro comunitario.', cta: 'Quiero sumarme' },
     { dia: 'Lunes', turno: 'Tarde', icono: 'bi-scissors', titulo: 'Tejido Artesanal', desc: 'Espacio de aprendizaje y formación en técnicas de tejido, promoviendo la producción artesanal y el apoyo mutuo.', cta: 'Reservar mi lugar' },
@@ -226,7 +225,6 @@ ${mensaje}`;
   let itemWidth = 0;
   const GAP = 25;
 
-  // Recalcula medidas: solo se llama al cargar y al hacer resize 
   function recalcMedidas() {
     if (items.length === 0) return;
     const trackWidth = track.getBoundingClientRect().width;
@@ -264,8 +262,10 @@ ${mensaje}`;
     if (autoPlayTimer) clearInterval(autoPlayTimer);
   }
 
-  nextBtn.addEventListener('click', () => { irSiguiente(); startAutoPlay(); });
-  prevBtn.addEventListener('click', () => { irAnterior(); startAutoPlay(); });
+  if (nextBtn && prevBtn) {
+    nextBtn.addEventListener('click', () => { irSiguiente(); startAutoPlay(); });
+    prevBtn.addEventListener('click', () => { irAnterior(); startAutoPlay(); });
+  }
 
   items.forEach(item => {
     item.addEventListener('click', () => {
@@ -288,11 +288,12 @@ ${mensaje}`;
     startAutoPlay();
   }
 
-  modalCerrar.addEventListener('click', cerrarModalCarrusel);
-
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) cerrarModalCarrusel();
-  });
+  if (modalCerrar) {
+    modalCerrar.addEventListener('click', cerrarModalCarrusel);
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) cerrarModalCarrusel();
+    });
+  }
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalOverlay.classList.contains('activo')) {
@@ -300,7 +301,6 @@ ${mensaje}`;
     }
   });
 
-  // Evita recalcular decenas de veces por segundo
   let resizeTimer = null;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
@@ -310,12 +310,40 @@ ${mensaje}`;
     }, 150);
   });
 
-  container.addEventListener('mouseenter', stopAutoPlay);
-  container.addEventListener('mouseleave', () => {
-    if (!modalOverlay.classList.contains('activo')) startAutoPlay();
-  });
+  if (container) {
+    container.addEventListener('mouseenter', stopAutoPlay);
+    container.addEventListener('mouseleave', () => {
+      if (!modalOverlay.classList.contains('activo')) startAutoPlay();
+    });
+  }
 
   recalcMedidas();
   updateCarrusel();
   startAutoPlay();
+
+  /* =========================================================
+     BOTÓN COPIAR ALIAS (DONACIONES)
+  ========================================================= */
+  const btnCopiar = document.getElementById("btnCopiar");
+  const aliasTexto = document.getElementById("aliasTexto");
+  const mensajeCopiado = document.getElementById("mensajeCopiado");
+
+  if (btnCopiar && aliasTexto) {
+      btnCopiar.addEventListener("click", () => {
+          const alias = aliasTexto.innerText.trim();
+          
+          navigator.clipboard.writeText(alias).then(() => {
+              mensajeCopiado.classList.add("activo");
+              btnCopiar.innerHTML = `<i class="bi bi-check2"></i> Copiado`;
+              
+              setTimeout(() => {
+                  mensajeCopiado.classList.remove("activo");
+                  btnCopiar.innerHTML = `<i class="bi bi-clipboard"></i> Copiar`;
+              }, 2000);
+          }).catch(err => {
+              console.error("Error al copiar el alias: ", err);
+          });
+      });
+  }
+
 });

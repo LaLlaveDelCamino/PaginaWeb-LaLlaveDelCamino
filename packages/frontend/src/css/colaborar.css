@@ -83,29 +83,27 @@
     letter-spacing: 1px;
 }
 
-/* ---- MEDIA QUERY ÚNICA PARA CELULARES ---- */
 @media (max-width: 48rem) {
     .seccion-donaciones {
         padding: 5rem 1.5rem;
         min-height: auto;
-        /* Mantiene el background-color: var(--brand-green) heredado arriba */
     }
 
     .seccion-donaciones .section-title {
         font-size: 2.1rem;
-        color: var(--white); /* Forzamos color blanco */
+        color: var(--white);
     }
 
     .donaciones-intro {
         font-size: 1.25rem;
         margin-bottom: 2.5rem;
-        color: var(--white); /* Forzamos color blanco */
+        color: var(--white); 
     }
 
     .donaciones-dato-item {
         font-size: 1.2rem;
         text-align: center;
-        color: var(--white); /* Forzamos color blanco */
+        color: var(--white); 
     }
 
     .alias-resaltado {
@@ -127,4 +125,63 @@ body.high-contrast .donaciones-dato-item {
 
 body.high-contrast .dato-label {
     opacity: 1;
+}
+
+.alias-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-copiar {
+    background-color: var(--white);
+    color: var(--text-main);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-copiar:hover {
+    background-color: var(--bg-color);
+    transform: translateY(-0.2rem);
+}
+
+.copiado-aviso {
+    position: absolute;
+    bottom: -2.5rem;
+    background-color: var(--text-main);
+    color: var(--white);
+    padding: 0.2rem 0.8rem;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.copiado-aviso.activo {
+    opacity: 1;
+}
+
+@media (max-width: 48rem) {
+    .alias-wrapper {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .btn-copiar {
+        margin-top: 0.4rem;
+    }
 }
